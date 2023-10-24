@@ -1,0 +1,2 @@
+Temp=25.0C Humidity=71.0%
+Temp=25.0C Humidity=71.0%
