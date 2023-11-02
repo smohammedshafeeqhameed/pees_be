@@ -8,7 +8,6 @@ class CustomUser(AbstractUser):
                               null=True, blank=True)
     phone = models.CharField(max_length=15, unique=True, null=True, blank=True)
 
-    # Add custom fields here, if needed
 
     def __str__(self):
         return self.username

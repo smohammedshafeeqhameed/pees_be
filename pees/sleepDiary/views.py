@@ -7,10 +7,17 @@ from rest_framework import generics
 from rest_framework.parsers import FileUploadParser
 
 
+
 class SleepLogCreate(generics.CreateAPIView):
+    print("heeerreee")
     queryset = SleepLog.objects.all()
     serializer_class = SleepLogSerializer
     permission_classes = [IsAuthenticated]
+
+    def perform_create(self, serializer):
+        print(self.request.user)
+        # Automatically set the user field to the currently authenticated user
+        serializer.save(user=self.request.user)
 
 
 class SleepLogList(generics.ListAPIView):
