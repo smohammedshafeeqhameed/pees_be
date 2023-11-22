@@ -13,3 +13,14 @@ class Task(models.Model):
 
     def __str__(self):
         return self.title
+
+
+class Doctor(models.Model):
+    key = models.PositiveIntegerField(unique=True)
+    name = models.CharField(max_length=100)
+    description = models.TextField()
+    phoneNumber = models.CharField(max_length=20)
+    iconName = models.CharField(max_length=50)
+
+    def __str__(self):
+        return self.name

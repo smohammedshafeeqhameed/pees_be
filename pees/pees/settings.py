@@ -59,11 +59,11 @@ MIDDLEWARE = [
 
 ROOT_URLCONF = 'pees.urls'
 
-CORS_ALLOW_ALL_ORIGINS = True
+CORS_ALLOW_ALL_ORIGINS = False
 
 CORS_ALLOWED_ORIGINS = [
     "http://localhost:3000",  # or the address where your React app is hosted
-    "https://sleep.govindsr.me/",
+    "https://sleep.govindsr.me",
 ]
 
 TEMPLATES = [
